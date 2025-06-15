@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="greeting">
+      <div id="hello">Hello, Roberta</div>
+      <div id="flower">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="31"
+          viewBox="0 0 34 31"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M17.06 7.46385C19.384 -5.51551 34.1218 2.9663 24.2784 11.5516C36.6085 7.18363 36.7546 24.1482 24.3613 19.8466C34.4565 28.4054 19.8648 36.8884 17.3149 24.0014C14.9909 36.9809 0.30599 28.5889 10.0964 19.9138C-2.2699 24.4242 -2.41599 7.45951 10.0136 11.6187C-0.117975 3.20226 14.5101 -5.42296 17.06 7.46385ZM16.1905 14.1439C17.0825 13.6179 18.3085 13.8625 18.8375 14.7597C19.3666 15.657 19.0401 16.938 18.1481 17.4639C17.2562 17.9898 16.0663 17.603 15.5373 16.7057C15.0082 15.8084 15.2986 14.6698 16.1905 14.1439Z"
+            fill="#FFB0E5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div id="switch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="146"
+        height="62"
+        viewBox="0 0 146 62"
+        fill="none"
+      >
+        <g filter="url(#filter0_ii_5_81)">
+          <rect x="0.355469" width="138" height="62" rx="31" fill="#FFB0E5" />
+        </g>
+        <circle cx="114.711" cy="31" r="31" fill="white" />
+        <defs>
+          <filter
+            id="filter0_ii_5_81"
+            x="-9.64453"
+            y="-10"
+            width="158"
+            height="82"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dx="10" dy="10" />
+            <feGaussianBlur stdDeviation="5" />
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.682353 0 0 0 0 0.682353 0 0 0 0 0.803922 0 0 0 0.2 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="shape"
+              result="effect1_innerShadow_5_81"
+            />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dx="-10" dy="-10" />
+            <feGaussianBlur stdDeviation="5" />
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.7 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="effect1_innerShadow_5_81"
+              result="effect2_innerShadow_5_81"
+            />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="boxes">
+      <div class="quote">
+        <div id="quote-box">
+            <p id="quote-text">   </p>
+        </div>
+        <div id="quote-heart">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="126"
+            height="126"
+            viewBox="0 0 126 126"
+            fill="none"
+          >
+            <g filter="url(#filter0_dd_5_856)">
+              <rect
+                x="30"
+                y="30"
+                width="66"
+                height="66"
+                rx="33"
+                fill="#ECEDF1"
+              />
+            </g>
+            <path
+              d="M78 60.7071C78 56.3938 74.5574 53 70.3151 53C66.8896 53 63.9918 55.3308 62.9992 58.4801C62.0057 55.3312 59.1079 53.0811 55.6824 53.0811C51.4393 53.0811 48 56.3782 48 60.6931C48 62.8703 48.8784 64.4085 50.292 66.0546L63.0063 79L75.7059 66.0546C77.1208 64.4085 78 62.8826 78 60.7071Z"
+              fill="#FFB0E5"
+            />
+            <defs>
+              <filter
+                id="filter0_dd_5_856"
+                x="0"
+                y="0"
+                width="126"
+                height="126"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="10" dy="10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.0509804 0 0 0 0 0.152941 0 0 0 0 0.313726 0 0 0 0.16 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_5_856"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="-10" dy="-10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect1_dropShadow_5_856"
+                  result="effect2_dropShadow_5_856"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_5_856"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div id="thumbs-down">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="126"
+            height="126"
+            viewBox="0 0 126 126"
+            fill="none"
+          >
+            <g filter="url(#filter0_dd_5_857)">
+              <rect
+                x="30"
+                y="30"
+                width="66"
+                height="66"
+                rx="33"
+                fill="#ECEDF1"
+              />
+            </g>
+            <path
+              d="M58.8429 78C59.6571 77.9143 60.4286 77.3572 60.8571 76.5429C61.4143 75.4286 65.5286 67.1572 66.3429 66.3429C67.1571 65.5286 68.2286 65.1429 69.4286 65.1429L69.4286 48L54.4286 48C53.5286 48 52.7571 48.5572 52.4143 49.3286C52.4143 49.3286 48 61.8 48 63C48 64.2 48.9429 65.1429 50.1429 65.1429L56.5714 65.1429C57.7714 65.1429 58.7143 66.2143 58.7143 67.2857C58.7143 68.3572 57.0429 74.0572 56.7 75.1714C56.3571 76.2857 56.9143 77.4857 58.0286 77.8714C58.3286 77.9572 58.5429 78.0429 58.8429 78ZM78 65.1429L78 48L73.7143 48L73.7143 65.1429L78 65.1429Z"
+              fill="#7B7B82"
+            />
+            <defs>
+              <filter
+                id="filter0_dd_5_857"
+                x="0"
+                y="0"
+                width="126"
+                height="126"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="10" dy="10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.0509804 0 0 0 0 0.152941 0 0 0 0 0.313726 0 0 0 0.16 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_5_857"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="-10" dy="-10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect1_dropShadow_5_857"
+                  result="effect2_dropShadow_5_857"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_5_857"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="reminders">
+        <div id="reminder-box">
+            <div class="user-reminders">
+                    </div>
+        </div>
+        <!-- <div id="reminder-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M8.00002 10L6.00002 8.00002M8.00002 10C8.93125 9.64585 9.82461 9.19917 10.6667 8.66669M8.00002 10V13.3334C8.00002 13.3334 10.02 12.9667 10.6667 12C11.3867 10.92 10.6667 8.66669 10.6667 8.66669M6.00002 8.00002C6.35478 7.07964 6.80149 6.1974 7.33335 5.36669C8.11014 4.12468 9.19177 3.10206 10.4754 2.39608C11.7589 1.69011 13.2018 1.32427 14.6667 1.33336C14.6667 3.14669 14.1467 6.33336 10.6667 8.66669M6.00002 8.00002L2.66669 8.00003C2.66669 8.00003 3.03335 5.98003 4.00002 5.33337C5.08002 4.61337 7.33335 5.33337 7.33335 5.33337M3.00002 11.0001C2.00002 11.8401 1.66669 14.3334 1.66669 14.3334C1.66669 14.3334 4.16002 14.0001 5.00002 13.0001C5.47335 12.4401 5.46669 11.5801 4.94002 11.0601C4.68089 10.8127 4.33955 10.6698 3.9815 10.6588C3.62346 10.6477 3.27394 10.7692 3.00002 11.0001Z"
+              stroke="#09090B"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div> -->
+        <div id="reminder-text">Your Reminders:</div>
+        <!-- <div id="reminder component"></div> -->
+        <div id="add-button-reminders">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="106"
+            height="106"
+            viewBox="0 0 106 106"
+            fill="none"
+          >
+            <g filter="url(#filter0_dd_6_170)">
+              <rect
+                x="30"
+                y="30"
+                width="46"
+                height="46"
+                rx="23"
+                fill="#ECEDF1"
+              />
+            </g>
+            <path
+              d="M58.1441 42L55.6201 44.524L60.6681 49.5721L63.1922 47.048L58.1441 42ZM53.0961 47.048L43 57.1441V62.1922H48.048L58.1441 52.0961L53.0961 47.048Z"
+              fill="#7B7B82"
+            />
+            <defs>
+              <filter
+                id="filter0_dd_6_170"
+                x="0"
+                y="0"
+                width="106"
+                height="106"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="10" dy="10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.0509804 0 0 0 0 0.152941 0 0 0 0 0.313726 0 0 0 0.16 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_6_170"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="-10" dy="-10" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect1_dropShadow_6_170"
+                  result="effect2_dropShadow_6_170"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_6_170"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+<!-- 
+      <div class="to-do">
+        <div id="add-button-to-do"></div>
+      </div>
+
+      <div class="today">
+        <div id="calendar"></div>
+        <div id="weather"></div>
+      </div>
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
