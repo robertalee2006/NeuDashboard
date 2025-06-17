@@ -4,14 +4,49 @@ body {
   align-items: center;
   flex-direction: column;
   background: #f0f0f3;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   padding: 20px 50px;
   box-sizing: border-box;
   border-radius: 50px;
   gap: 30px;
-  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 10s linear forwards;
 }
 
 .gothic-a1-regular {
@@ -111,6 +146,15 @@ body {
   bottom: calc(15%);
 }
 
+.complete-button {
+  fill: #f0f0f3;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1))
+    drop-shadow(-10px -10px 10px rgba(255, 255, 255, 0.5));
+  width: 30px;
+  height: 30px;
+  z-index: 50;
+}
+
 #reminder-box {
   width: 600px;
   height: 300px;
@@ -141,23 +185,23 @@ body {
   cursor: pointer;
 }
 
-#reminder-component {
-  display: flex;
+.user-input-reminders {
   width: 100%;
-  min-height: 64px;
-  border-radius: 8px;
-  background: #f0f0f3;
-  padding: 12px 16px;
-  box-sizing: border-box;
-}
-
-.user-reminders {
-  width: 100%;
-  text-align: center;
+  text-align: start;
   color: #656565;
   font-family: "Gothic A1", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  max-width: 470px;
+}
+
+.user-reminders-green {
+  width: 100%;
+  text-align: start;
+  color: #3fd239;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   max-width: 470px;
 }
 
@@ -222,61 +266,74 @@ body {
   background: #f0f0f3;
   box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.7) inset,
     10px 10px 10px rgba(174, 174, 205, 0.2) inset;
-  display: flex;
-  flex-direction: row;
   margin-top: 20px;
-}
-
-/*
- #calendar {
-  color: rgb(57, 57, 57);
-  font-family: Gotham;
-  font-size: 24px;
-  font-weight: 500;
-  font-size: 10px;
   display: flex;
-  width: 450px;
+  justify-content: center;
+  align-items: center;
 }
 
-.fc .fc-daygrid-day {
-  height: 30px; 
-  min-width: 10px; 
+#weather-text {
+  position: relative;
+  left: calc(10%);
+  color: #787878;
+  font-family: "Gotham";
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 150%;
 }
-
-.fc .fc-col-header-cell {
-  height: 30px;
-  font-size: 14px;
-}
-
-.fc .fc-event {
-  font-size: 12px;
-  padding: 2px 4px;
-} 
-*/
 
 #weather {
   transform: scale(0.6);
+  align-items: center;
 }
 
 #rain {
   position: relative;
   left: calc(100%);
-  bottom: calc(15%);
+  bottom: calc(55%);
 }
 
-#sun {
+.weather-colour-wrapper {
   position: relative;
-  left: calc(134%);
-  bottom: calc(100%);
+  left: calc(-90%);
+  bottom: calc(55%);
 }
 
-#clouds {
-  border-radius: 262px;
-  background: #f0f0f3;
-  box-shadow: -10px -10px 10px 0px rgba(255, 255, 255, 0.5) inset,
-    10px 10px 10px 0px rgba(0, 0, 0, 0.1) inset;
+#sun,
+#sun-yellow,
+#clouds-blue,
+#storm-purple {
+  position: absolute;
 }
 
 #sun {
-  z-index: 50;
+  z-index: 200;
+  left: calc(133%);
+  top: calc(32%);
+}
+
+#sun-yellow {
+  z-index: 200;
+  left: calc(133%);
+  top: calc(32%);
+}
+
+#clouds-blue {
+  z-index: 199;
+  left: calc(122%);
+  top: calc(22%);
+}
+
+#storm-purple {
+  flex-shrink: 0;
+  fill: radial-gradient(
+    112.04% 47.03% at 50.21% 50.21%,
+    #f0f0f3 0%,
+    #c1bce9 100%
+  );
+  filter: blur(0px);
+  z-index: 199;
+  left: calc(122%);
+  top: calc(22%);
+  transform: scale(2);
 }
