@@ -11,6 +11,9 @@ body {
   box-sizing: border-box;
   border-radius: 50px;
   gap: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; /* or 500 for medium */
+  font-style: bold;
 }
 
 .hidden {
@@ -71,9 +74,9 @@ body {
 
 #hello {
   color: #000;
-  font-family: Gotham;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: bold;
   padding-top: 10px;
 }
 
@@ -173,9 +176,9 @@ body {
   position: relative;
   padding: 2px;
   color: #000;
-  font-family: Gotham;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 #add-button-reminders {
@@ -237,9 +240,9 @@ body {
 #to-do-text {
   padding: 2px;
   color: #000;
-  font-family: Gotham;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 #add-button-to-do {
@@ -276,9 +279,9 @@ body {
   position: relative;
   left: calc(10%);
   color: #787878;
-  font-family: "Gotham";
+  font-family: "Montserrat" "sans-serif";
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: normal;
   line-height: 150%;
 }
 
