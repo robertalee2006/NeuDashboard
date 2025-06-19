@@ -14,6 +14,10 @@ const sunYellow = document.getElementById("sun-yellow");
 const cloudsBlue = document.getElementById("clouds-blue");
 const stormPurple = document.getElementById("storm-purple");
 
+const pinkSwitch = document.getElementById("switch");
+
+pinkSwitch.classList.add("hidden");
+
 //Initial Fetch Quote
 
 entirePage.classList.add("hidden");
@@ -55,7 +59,8 @@ async function fetchQuote() {
     }`;
   } catch (error) {
     console.error("Failed to fetch quote:", error);
-    document.getElementById("quote-text").textContent = "Failed to load quote.";
+    document.getElementById("quote-text").textContent =
+      "A dead end is just a good place to turn around. – Naomi Judd ";
   }
 }
 
