@@ -13,7 +13,7 @@ body {
   gap: 30px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold; /* or 500 for medium */
-  font-style: bold;
+  font-style: normal;
 }
 
 .hidden {
@@ -48,8 +48,26 @@ body {
   }
 }
 
+@keyframes fastHeartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .heartbeat {
   animation: heartbeat 10s linear forwards;
+}
+
+.fast-heartbeat {
+  animation: fastHeartbeat 2s linear infinite;
 }
 
 .gothic-a1-regular {
@@ -81,12 +99,14 @@ body {
 }
 
 #flower {
-  width: 30px;
-  height: 33px;
+  width: 66px;
+  height: 66px;
   transform: rotate(-30.525deg);
   fill: #ffb0e5;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-left: -20px;
+  margin-top: -25px;
+  cursor: pointer;
+  transform: scale(0.6);
 }
 
 #switch {
@@ -123,10 +143,10 @@ body {
   width: 500px;
   text-align: center;
   color: #656565;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Montserrat" "sans-serif";
   font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 20px;
+  font-weight: normal;
+  line-height: 150%;
 }
 
 #quote-heart,
@@ -254,12 +274,12 @@ body {
 
 .user-to-do {
   width: 100%;
-  text-align: center;
+  text-align: start;
   color: #656565;
   font-family: "Gothic A1", sans-serif;
   font-size: 17.5px;
   font-weight: 400;
-  max-width: 500px;
+  max-width: 470px;
 }
 
 #today-box {
@@ -335,7 +355,7 @@ body {
     #c1bce9 100%
   );
   filter: blur(0px);
-  z-index: 199;
+  z-index: 190;
   left: calc(122%);
   top: calc(22%);
   transform: scale(2);
