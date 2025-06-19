@@ -69,7 +69,7 @@ fetchQuote();
 quoteHeart.addEventListener("click", () => {
   console.log("click");
   quoteText.style.color = "#ff95dc";
-  quoteText.style.fontSize = "19px";
+  quoteText.style.fontSize = "18px";
   quoteText.style.fontWeight = "bold";
 });
 
