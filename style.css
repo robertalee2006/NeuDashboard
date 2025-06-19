@@ -1,6 +1,7 @@
 body {
   display: flex;
   position: relative;
+  align-content: center;
   align-items: center;
   flex-direction: column;
   background: #f0f0f3;
@@ -275,7 +276,17 @@ body {
 .user-to-do {
   width: 100%;
   text-align: start;
-  color: #656565;
+  color: #646464;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 17.5px;
+  font-weight: 400;
+  max-width: 470px;
+}
+
+.user-to-do-green {
+  width: 100%;
+  text-align: start;
+  color: #3fd239;
   font-family: "Gothic A1", sans-serif;
   font-size: 17.5px;
   font-weight: 400;

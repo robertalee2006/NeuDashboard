@@ -543,10 +543,16 @@ let toDo = [];
 
 const toDoContainer = document.querySelector("#to-do-box");
 
-const savedToDo = JSON.parse(localStorage.getItem("toDo")) || [];
+const savedToDo = JSON.parse(localStorage.getItem("toDo"));
 
-toDo = savedToDo;
+// Check if savedToDo is an array before assigning
+if (Array.isArray(savedToDo)) {
+  toDo = savedToDo;
+} else {
+  toDo = [];
+}
 
+// Now safe to iterate
 toDo.forEach((toDoObj) => {
   createToDo(toDoObj);
 });
@@ -563,6 +569,7 @@ function createToDo(toDoObj) {
   toDoDiv.style.marginTop = "-15px";
 
   const completeButton = document.createElement("button");
+
   completeButton.style.all = "unset";
   completeButton.style.borderRadius = "100%";
   completeButton.style.background = "none";
@@ -602,25 +609,26 @@ function createToDo(toDoObj) {
   `;
 
   const textDiv = document.createElement("div");
-  textDiv.classList.add(".user-to-do");
+  textDiv.classList.add("user-to-do");
   textDiv.textContent = text;
   textDiv.style.cursor = "pointer";
-  textDiv.style.color = "#787878";
-  textDiv.style.fontWeight = "normal";
 
   textDiv.addEventListener("click", () => {
-    textDiv.style.color = " #3fd239";
+    textDiv.classList.toggle("user-to-do-green");
+    console.log(textDiv.classList);
 
     const index = toDo.findIndex((r) => r.text === text);
-    toDoObj.done = textDiv.style.color = " #3fd239";
+    toDoObj.done = textDiv.classList.contains("user-to-do-green");
+
     if (index !== -1) {
       toDo[index].done = toDoObj.done;
-      localStorage.setItem("toDo", JSON.stringify(toDo));
+      localStorage.setItem("toDo", JSON.stringify(toDo)); // Save entire array
     }
   });
 
+  // On page load, apply green if already done
   if (done) {
-    textDiv.style.color = " #3fd239";
+    textDiv.classList.add("user-to-do-green");
   }
 
   toDoDiv.appendChild(completeButton);
@@ -654,10 +662,4 @@ addToDo.addEventListener("click", () => {
   localStorage.setItem("toDo", JSON.stringify(toDo));
 
   createToDo(toDoObj);
-});
-
-const done = new Audio("doneSound.mp3"); // File name as a string
-
-completeButton.addEventListener("click", () => {
-  done.play(); // This only runs when clicked
 });
